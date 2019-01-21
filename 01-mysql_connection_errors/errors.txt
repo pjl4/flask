@@ -1,0 +1,10 @@
+pymysql.err.OperationalError: (1045, "Access denied for user 'dad'@'localhost' (using password: YES)")
+
+Use the right username
+
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+use the right password
+
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'locahost' ([Errno 11001] getaddrinfo failed)")
+provide the correct location for the MySQL server

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.css">
+   
+    <title>Friends</title>
+</head>
+<body>
+    <h1>These are my friends!</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Occupation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for friend in friends%}
+                <tr>
+                    <td>{{friend['first_name']}}</td>
+                    <td>{{friend['last_name']}}</td>
+                    <td>{{friend['occupation']}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <form action="/create_friend" method="POST">
+        <h3>Add a friend!</h3>
+        <div class='twelve columns'>
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" placeholder="First Name">
+        </div>
+        <div class='twelve columns'>
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" placeholder="Last Name">
+        </div>
+        <div class='twelve columns'>
+            <label for="occupation">Occupation:</label>
+            <input type="text" name="occupation" placeholder="Occupation">
+        </div>
+        <div class='twelve columns'>
+            <input type="submit" value="Add the Friend!">
+        </div>
+    </form>
+
+</body>
+</html>
